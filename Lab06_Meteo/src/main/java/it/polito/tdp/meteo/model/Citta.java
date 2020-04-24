@@ -77,6 +77,17 @@ public class Citta {
 	public String toString() {
 		return nome;
 	}
+
+	public double calcolaUmiditaMedia() {
+		
+		double result = 0.0;
+		
+		for(Rilevamento r : this.rilevamenti) {
+			result += r.getUmidita();
+		}
+		
+		return result / ((double) this.rilevamenti.size()); 
+	}
 	
 
 }
