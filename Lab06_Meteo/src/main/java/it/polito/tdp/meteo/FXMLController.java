@@ -44,7 +44,7 @@ public class FXMLController {
     void doCalcolaSequenza(ActionEvent event) {
     	txtResult.clear();
     	int mese = boxMese.getSelectionModel().getSelectedItem();
-    	String result = this.model.trovaSequenza(2);
+    	String result = this.model.trovaSequenza(mese);
     	txtResult.setText(result);
     }
 
