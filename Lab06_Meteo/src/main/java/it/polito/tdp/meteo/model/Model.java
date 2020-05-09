@@ -70,12 +70,14 @@ public class Model {
 			Citta c = new Citta(l, rilevamentiCitta);
 			citta.add(c);
 			}
-		//Acquisisco date
-		for(Citta c : citta) {
+		/*for(Citta c : citta) {
 			for(Rilevamento r : c.getRilevamenti()) {
 			}
 		}
+		*/
 		
+		//L'idea era quella di creare una mappa con chiave data e valore una lista di rilevamenti, uno per citta' in quella data
+		//Così sembra funzionare
 		for(Citta c : citta) {
 			for(Rilevamento r : c.getRilevamenti()) {
 				//Se la data e' gia' stata acquisita, salvo il rilevamento per quella data
@@ -90,6 +92,7 @@ public class Model {
 			}
 		}
 		
+		//Chiamo ricorsione
 		cerca(parziale, this.rilevamentiMap, 0);
 
 		return result;
